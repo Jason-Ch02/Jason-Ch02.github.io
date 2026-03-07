@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人主页 | C++ 学习足迹</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+        }
+        section {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        .project-card {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 6px;
+        }
+        .project-card h3 {
+            color: #3498db;
+            margin-bottom: 0.5rem;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            padding-left: 1.5rem;
+        }
+        footer {
+            text-align: center;
+            color: #7f8c8d;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Hi, I'm 陈景政</h1>
+            <p class="subtitle">汕头大学 大一新生</p>
+        </header>
+
+        <section>
+            <h2>关于我</h2>
+            <p>我是一名的大一新生，对计算机科学充满热情。通过自学 C++、开发项目和刷算法题，我正在一步步构建自己的技术能力。我的目标是成为一名从事c++后端或者c++游戏引擎开发相关或者嵌入式方面相关的工作。</p>
+        </section>
+
+        <section>
+            <h2>我的项目</h2>
+            <div class="project-card">
+                <h3>贪吃蛇游戏</h3>
+                <p>用 C++ 和 Easy 开发的图形化贪吃蛇，实现了蛇的移动、碰撞检测、难度调节和记录分数功能。</p>
+                <a href="https://github.com/Jason-Ch02/studious-guide/tree/main/贪吃蛇" target="_blank">点击打开 GitHub 链接</a>
+            </div>
+            <div class="project-card">
+                <h3>职工管理系统</h3>
+                <p>用 C++ 实现的职工信息增删改查系统，练习了面向对象编程和文件 I/O 操作，了解并熟悉了文件流。</p>
+                <a href="https://github.com/Jason-Ch02/studious-guide/tree/main/职工管理系统" target="_blank">点击打开 GitHub 链接</a>
+            </div>
+            <div class="project-card">
+                <h3>通讯录系统</h3>
+                <p>用 C++ 实现的联系人管理系统，初次学习增删查改，了解到后端数据的录入，储存和整理，练习了数组和基础数据结构。</p>
+                <a href="https://github.com/Jason-Ch02/studious-guide/tree/main/通讯录的创建" target="_blank">点击打开 GitHub 链接</a>
+            </div>
+            <div class="project-card">
+                <h3>圆和点之间的关系</h3>
+                <p>初期学习的练手小项目：用 C++ 实现的几何计算，练习了函数封装。</p>
+                <a href="https://github.com/Jason-Ch02/studious-guide/tree/main/圆和点之间的关系" target="_blank">点击打开 GitHub 链接</a>
+            </div>
+        </section>
+
+        <section>
+            <h2>算法学习</h2>
+            <p>我正在通过 LeetCode 练习算法和数据结构，目前已完成 16 道题，主要使用 C++ 语言。</p>
+            <ul>
+                <li>已解决:16 题（简单 15 题，中等 1 题）</li>
+                <li>总提交:38 次,通过率:63.2%</li>
+                <li>覆盖知识点：链表、数组、字符串、基础算法</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>联系方式</h2>
+            <ul>
+                <li>GitHub:<a href="https://github.com/Jason-Ch02" target="_blank">https://github.com/Jason-Ch02</a></li>
+                <li>邮箱:25jzchen01@stu,eud.cn</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>© 2025 [Cjz] | 用 ❤️ 编写代码</p>
+        </footer>
+    </div>
+</body>
+</html>
