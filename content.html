@@ -47,19 +47,55 @@
             border-bottom: 2px solid #3498db;
             padding-bottom: 0.5rem;
         }
+        /* 新增：横向项目容器 */
+        .projects-scroll {
+            display: flex;
+            gap: 1.5rem;
+            overflow-x: auto;
+            padding: 0.5rem 0 1rem;
+            scrollbar-width: thin; /* 美化滚动条 */
+        }
+        /* 新增：带背景图的项目卡片 */
         .project-card {
-            margin-bottom: 1.5rem;
-            padding: 1rem;
+            flex: 0 0 280px; /* 固定宽度，不挤压 */
+            padding: 1.5rem;
             background: #f8f9fa;
-            border-radius: 6px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            position: relative; /* 用于背景图定位 */
+            overflow: hidden; /* 裁剪超出的背景图 */
+        }
+        /* 背景图片样式 */
+        .project-card .bg-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.15; /* 背景图半透明，不影响文字 */
+            object-fit: cover; /* 图片自适应填充 */
+            z-index: 0; /* 背景图在文字下面 */
+        }
+        /* 卡片内容（放在背景图上面） */
+        .project-card .card-content {
+            position: relative;
+            z-index: 1;
         }
         .project-card h3 {
             color: #3498db;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+        .project-card p {
+            color: #555;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
         }
         a {
             color: #3498db;
             text-decoration: none;
+            font-size: 0.9rem;
         }
         a:hover {
             text-decoration: underline;
@@ -88,25 +124,48 @@
 
         <section>
             <h2>我的项目</h2>
-            <div class="project-card">
-                <h3>贪吃蛇游戏</h3>
-                <p>用 C++ 和 Easy 开发的图形化贪吃蛇，实现了蛇的移动、碰撞检测、难度调节和记录分数功能。</p>
-                <a href="https://github.com/Jason-Ch02/studious-guide/tree/main/贪吃蛇" target="_blank">点击打开 GitHub 链接</a>
-            </div>
-            <div class="project-card">
-                <h3>职工管理系统</h3>
-                <p>用 C++ 实现的职工信息增删改查系统，练习了面向对象编程和文件 I/O 操作，了解并熟悉了文件流。</p>
-                <a href="https://github.com/Jason-Ch02/studious-guide/tree/main/职工管理系统" target="_blank">点击打开 GitHub 链接</a>
-            </div>
-            <div class="project-card">
-                <h3>通讯录系统</h3>
-                <p>用 C++ 实现的联系人管理系统，初次学习增删查改，了解到后端数据的录入，储存和整理，练习了数组和基础数据结构。</p>
-                <a href="https://github.com/Jason-Ch02/studious-guide/tree/main/通讯录的创建" target="_blank">点击打开 GitHub 链接</a>
-            </div>
-            <div class="project-card">
-                <h3>圆和点之间的关系</h3>
-                <p>初期学习的练手小项目：用 C++ 实现的几何计算，练习了函数封装。</p>
-                <a href="https://github.com/Jason-Ch02/studious-guide/tree/main/圆和点之间的关系" target="_blank">点击打开 GitHub 链接</a>
+            <!-- 改成横向容器 -->
+            <div class="projects-scroll">
+                <!-- 项目1：贪吃蛇游戏（可加背景图） -->
+                <div class="project-card">
+                    <!-- 背景图片：把 src 换成你的图片路径（和html同文件夹直接填文件名） -->
+                    <img src="snake.jpg" alt="贪吃蛇游戏截图" class="bg-img">
+                    <div class="card-content">
+                        <h3>贪吃蛇游戏</h3>
+                        <p>用 C++ 和 EasyX 开发的图形化贪吃蛇，实现了蛇的移动、碰撞检测、难度调节和记录分数功能。</p>
+                        <a href="https://github.com/Jason-Ch02/studious-guide/tree/main/贪吃蛇" target="_blank">点击打开 GitHub 链接</a>
+                    </div>
+                </div>
+
+                <!-- 项目2：职工管理系统 -->
+                <div class="project-card">
+                    <img src="employee.jpg" alt="职工管理系统截图" class="bg-img">
+                    <div class="card-content">
+                        <h3>职工管理系统</h3>
+                        <p>用 C++ 实现的职工信息增删改查系统，练习了面向对象编程和文件 I/O 操作，了解并熟悉了文件流。</p>
+                        <a href="https://github.com/Jason-Ch02/studious-guide/tree/main/职工管理系统" target="_blank">点击打开 GitHub 链接</a>
+                    </div>
+                </div>
+
+                <!-- 项目3：通讯录系统 -->
+                <div class="project-card">
+                    <img src="contacts.jpg" alt="通讯录系统截图" class="bg-img">
+                    <div class="card-content">
+                        <h3>通讯录系统</h3>
+                        <p>用 C++ 实现的联系人管理系统，初次学习增删查改，了解到后端数据的录入，储存和整理，练习了数组和基础数据结构。</p>
+                        <a href="https://github.com/Jason-Ch02/studious-guide/tree/main/通讯录的创建" target="_blank">点击打开 GitHub 链接</a>
+                    </div>
+                </div>
+
+                <!-- 项目4：圆和点之间的关系 -->
+                <div class="project-card">
+                    <img src="circle.jpg" alt="圆和点关系截图" class="bg-img">
+                    <div class="card-content">
+                        <h3>圆和点之间的关系</h3>
+                        <p>初期学习的练手小项目：用 C++ 实现的几何计算，练习了函数封装。</p>
+                        <a href="https://github.com/Jason-Ch02/studious-guide/tree/main/圆和点之间的关系" target="_blank">点击打开 GitHub 链接</a>
+                    </div>
+                </div>
             </div>
         </section>
 
